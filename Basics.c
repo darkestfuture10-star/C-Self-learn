@@ -19,3 +19,24 @@ how are you today? */
 /* Dont forget the ; semicolon at the end of each statement in C. It is used to terminate statements and separate them from one another.
 and C is as case sensitive language, meaning that uppercase and lowercase letters are treated as different characters. For example, "Hello" and "hello" would be considered different identifiers in C.
 printf will work but Printf wont */
+
+
+/*
+| Symbol | Name            | Common use               |
+| ------ | --------------- | ------------------------ |
+| `;`    | Semicolon       | End of statement         |
+| `{ }`  | Curly braces    | Code blocks              |
+| `( )`  | Parentheses     | Functions/conditions     |
+| `[ ]`  | Square brackets | Arrays                   |
+| `"`    | Double quote    | Strings                  |
+| `'`    | Single quote    | Characters               |
+| `#`    | Hash            | Preprocessor directives  |
+| `=`    | Assignment      | Assign a value           |
+| `==`   | Equality        | Compare values           |
+| `+`    | Plus            | Addition                 |
+| `-`    | Minus           | Subtraction              |
+| `*`    | Asterisk        | Multiplication / pointer |
+| `/`    | Slash           | Division                 |
+| `%`    | Modulo          | Remainder                |
+| `&`    | Ampersand       | Address-of / other uses  |
+*/
