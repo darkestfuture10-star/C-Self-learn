@@ -1,7 +1,7 @@
 // Checking prime or odd numbers
 
 #include <stdio.h>
-#include <math.h>
+#include <math.h> // dont forget to include the math.h header file for using the pow() function.
 int main ()
 {
     int num;
