@@ -22,35 +22,75 @@ printf will work but Printf wont */
 
 
 /*
-| Symbol | Name            | Common use               |
-| ------ | --------------- | ------------------------ |
-| `;`    | Semicolon       | End of statement         |
-| `{ }`  | Curly braces    | Code blocks              |
-| `( )`  | Parentheses     | Functions/conditions     |
-| `[ ]`  | Square brackets | Arrays                   |
-| `"`    | Double quote    | Strings                  |
-| `'`    | Single quote    | Characters               |
-| `#`    | Hash            | Preprocessor directives  |
-| `=`    | Assignment      | Assign a value           |
-| `==`   | Equality        | Compare values           |
-| `+`    | Plus            | Addition                 |
-| `-`    | Minus           | Subtraction              |
-| `*`    | Asterisk        | Multiplication / pointer |
-| `/`    | Slash           | Division                 |
-| `%`    | Modulo          | Remainder                |
-| `&`    | Ampersand       | Address-of / other uses  |
+The 32 classic C keywords are reserved words with predefined meanings in the language
+| Keyword    | Use                                                                         |
+| ---------- | --------------------------------------------------------------------------- |
+| `auto`     | Declares a local variable with automatic storage duration.                  |
+| `break`    | Immediately exits a loop or `switch`.                                       |
+| `case`     | Defines a condition/value inside a `switch` statement.                      |
+| `char`     | Declares a character-type variable.                                         |
+| `const`    | Makes a variable's value unmodifiable through that variable.                |
+| `continue` | Skips the current loop iteration and moves to the next one.                 |
+| `default`  | Defines the fallback case in a `switch`.                                    |
+| `do`       | Starts a `do-while` loop that executes at least once.                       |
+| `double`   | Declares a double-precision floating-point variable.                        |
+| `else`     | Executes code when an `if` condition is false.                              |
+| `enum`     | Defines a set of named integer constants.                                   |
+| `extern`   | Declares a variable/function that is defined elsewhere.                     |
+| `float`    | Declares a single-precision decimal variable.                               |
+| `for`      | Creates a loop with initialization, condition, and update.                  |
+| `goto`     | Jumps directly to a labeled statement.                                      |
+| `if`       | Executes code when a condition is true.                                     |
+| `int`      | Declares an integer variable.                                               |
+| `long`     | Declares a long integer or modifies an integer type's size.                 |
+| `register` | Suggests storing a variable in a CPU register for faster access.            |
+| `return`   | Exits a function and optionally sends a value back.                         |
+| `short`    | Declares a short integer or modifies an integer type's size.                |
+| `signed`   | Allows an integer type to store positive and negative values.               |
+| `sizeof`   | Returns the size in bytes of a type or object.                              |
+| `static`   | Gives a variable persistent storage or limits linkage depending on context. |
+| `struct`   | Defines a structure that groups different data types together.              |
+| `switch`   | Selects one block of code based on an expression's value.                   |
+| `typedef`  | Creates an alias (alternative name) for a data type.                        |
+| `union`    | Defines a type where multiple members share the same memory location.       |
+| `unsigned` | Makes an integer type store only non-negative values.                       |
+| `void`     | Represents no value/type, commonly used for functions returning nothing.    |
+| `volatile` | Tells the compiler a variable's value may change unexpectedly.              |
+| `while`    | Repeats code while a condition remains true.                                |
 */
 
-
-/*#include <stdio.h> → header
-int                → data type
-main()             → main function
-{ }                → code block
-int a              → variable
-=                  → assignment
-+                  → addition
-printf()           → output function
-"%d"               → integer format specifier
-\n                 → new line
-;                  → statement terminator
-return 0           → return value*/
+/*
+These are the most common symbols/operators you'll see constantly:
+| Symbol  | Name                | Common use                                |
+| ------- | ------------------- | ----------------------------------------- |
+| `;`     | Semicolon           | Ends a statement                          |
+| `{ }`   | Curly braces        | Defines a block of code                   |
+| `( )`   | Parentheses         | Functions and conditions                  |
+| `[ ]`   | Square brackets     | Arrays                                    |
+| `"`     | Double quotes       | Strings/text                              |
+| `'`     | Single quotes       | Single characters                         |
+| `#`     | Hash                | Preprocessor directives like `#include`   |
+| `=`     | Assignment          | Assigns a value                           |
+| `==`    | Equality            | Checks if two values are equal            |
+| `!=`    | Not equal           | Checks if values are different            |
+| `>`     | Greater than        | Comparison                                |
+| `<`     | Less than           | Comparison                                |
+| `>=`    | Greater/equal       | Comparison                                |
+| `<=`    | Less/equal          | Comparison                                |
+| `+`     | Plus                | Addition                                  |
+| `-`     | Minus               | Subtraction                               |
+| `*`     | Asterisk            | Multiplication / pointers                 |
+| `/`     | Slash               | Division                                  |
+| `%`     | Modulo              | Gets remainder                            |
+| `++`    | Increment           | Adds 1                                    |
+| `--`    | Decrement           | Subtracts 1                               |
+| `&&`    | Logical AND         | Both conditions must be true              |
+| `\|\|`  | Logical OR          | At least one condition must be true       |
+| `!`     | Logical NOT         | Reverses a condition                      |
+| `&`     | Ampersand           | Address-of operator                       |
+| `->`    | Arrow               | Accesses struct members through a pointer |
+| `.`     | Dot                 | Accesses a struct member                  |
+| `\`     | Backslash           | Used in escape sequences like `\n`        |
+| `//`    | Single-line comment | Adds a comment                            |
+| `/* */` | Multi-line comment  | Adds a multi-line comment                 |
+*/
