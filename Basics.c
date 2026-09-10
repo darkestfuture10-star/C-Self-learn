@@ -40,3 +40,17 @@ printf will work but Printf wont */
 | `%`    | Modulo          | Remainder                |
 | `&`    | Ampersand       | Address-of / other uses  |
 */
+
+
+/*#include <stdio.h> → header
+int                → data type
+main()             → main function
+{ }                → code block
+int a              → variable
+=                  → assignment
++                  → addition
+printf()           → output function
+"%d"               → integer format specifier
+\n                 → new line
+;                  → statement terminator
+return 0           → return value*/
