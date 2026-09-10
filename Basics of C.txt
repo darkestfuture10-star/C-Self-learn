@@ -1,0 +1,343 @@
+===================
+  C PROGRAMMING, THE BASICS
+===================
+
+This file covers the foundational concepts of C you need
+before moving on to loops (for, while, do-while).
+
+
+----------------------------------------
+1. WHAT IS C?
+----------------------------------------
+C is a general-purpose, procedural programming language
+created by Dennis Ritchie in 1972 at Bell Labs.
+It is:
+- Compiled (not interpreted) -> source code is turned into
+  machine code by a compiler (gcc, clang, etc.)
+- Low-level enough to manipulate memory directly (pointers)
+- The base language many other languages (C++, Java, Python's
+  interpreter, etc.) borrow syntax/ideas from
+
+
+----------------------------------------
+2. STRUCTURE OF A C PROGRAM
+----------------------------------------
+#include <stdio.h>      // Header inclusion
+
+int main(void) {         // Entry point of every C program
+    printf("Hello, World!\n");
+    return 0;             // 0 means "program ended successfully"
+}
+
+Key points:
+- Every C program must have exactly one main() function.
+- Execution always starts from main().
+- Statements end with a semicolon ";".
+- Code blocks are wrapped in curly braces "{ }".
+- return 0; sends an "exit status" back to the operating system.
+
+
+----------------------------------------
+3. COMPILING AND RUNNING
+----------------------------------------
+Using gcc (GNU Compiler Collection):
+
+    gcc filename.c -o output
+    ./output          (Linux/Mac)
+    output.exe        (Windows)
+
+Compilation stages (good to know):
+1. Preprocessing  -> handles # directives (like #include)
+2. Compiling      -> converts code to assembly
+3. Assembling     -> converts assembly to machine code (object file)
+4. Linking        -> combines object files + libraries into
+                      the final executable
+
+
+----------------------------------------
+4. HEADERS (LIBRARIES)
+----------------------------------------
+Headers give you access to pre-written functions.
+You include them with #include.
+
+  #include <stdio.h>    -> Standard Input/Output (printf, scanf)
+  #include <stdlib.h>   -> General utilities (malloc, exit, rand)
+  #include <string.h>   -> String handling (strlen, strcpy, strcmp)
+  #include <math.h>     -> Math functions (sqrt, pow, sin, cos)
+  #include <ctype.h>    -> Character checks (isdigit, isalpha)
+  #include <time.h>     -> Date and time functions
+
+Syntax difference:
+  #include <header.h>   -> standard library header
+  #include "myfile.h"   -> your own custom header file
+
+
+----------------------------------------
+5. COMMENTS
+----------------------------------------
+// This is a single-line comment
+
+/*
+   This is a
+   multi-line comment
+*/
+
+Comments are ignored by the compiler. Use them to explain code.
+
+
+----------------------------------------
+6. VARIABLES
+----------------------------------------
+A variable is a named piece of memory that stores a value.
+
+Syntax:   type name = value;
+
+Examples:
+    int age = 20;
+    float price = 9.99;
+    char grade = 'A';
+
+Rules for naming variables:
+- Can contain letters, digits, underscores
+- Cannot start with a digit
+- Cannot use C keywords (int, return, if, etc.)
+- Case-sensitive (age and Age are different)
+
+
+----------------------------------------
+7. DATA TYPES
+----------------------------------------
+Basic (primitive) types:
+
+  int      -> whole numbers            (e.g. 10, -5)
+  float    -> decimal numbers          (e.g. 3.14)
+  double   -> double-precision decimal (more accuracy than float)
+  char     -> single character         (e.g. 'A', '9', '$')
+  void     -> represents "no value"
+
+Type modifiers (change size/range):
+  short, long, long long, signed, unsigned
+
+Example sizes (typical, may vary by system):
+  char        1 byte
+  int         4 bytes
+  float       4 bytes
+  double      8 bytes
+  long        8 bytes
+
+Use sizeof(type) to check size on your system:
+    printf("%zu\n", sizeof(int));
+
+
+----------------------------------------
+8. CONSTANTS
+----------------------------------------
+Values that cannot change during execution.
+
+  const int MAX = 100;         // using const keyword
+  #define PI 3.14159           // using preprocessor macro
+
+Difference:
+- const is a typed, real variable (memory allocated)
+- #define is a text substitution done before compilation
+
+
+----------------------------------------
+9. OPERATORS
+----------------------------------------
+
+a) Arithmetic Operators
+   +   addition
+   -   subtraction
+   *   multiplication
+   /   division
+   %   modulus (remainder)
+
+b) Assignment Operators
+   =    assign
+   +=   add and assign      (a += 5  ->  a = a + 5)
+   -=   subtract and assign
+   *=   multiply and assign
+   /=   divide and assign
+   %=   modulus and assign
+
+c) Comparison / Relational Operators
+   ==   equal to
+   !=   not equal to
+   >    greater than
+   <    less than
+   >=   greater than or equal to
+   <=   less than or equal to
+
+d) Logical Operators
+   &&   logical AND
+   ||   logical OR
+   !    logical NOT
+
+e) Increment / Decrement
+   ++   increment by 1   (i++ or ++i)
+   --   decrement by 1   (i-- or --i)
+
+f) Bitwise Operators
+   &    AND
+   |    OR
+   ^    XOR
+   ~    NOT (complement)
+   <<   left shift
+   >>   right shift
+
+g) Other
+   sizeof()   returns size of a type/variable in bytes
+   ?:         ternary operator (short if-else)
+              condition ? value_if_true : value_if_false;
+
+
+----------------------------------------
+10. SYMBOLS / PUNCTUATION CHEAT SHEET
+----------------------------------------
+  ;    ends a statement
+  { }  defines a block of code
+  ( )  used for function calls, conditions, parameter lists
+  [ ]  used for arrays
+  ,    separates items (variables, function arguments)
+  "  " double quotes -> for strings
+  '  ' single quotes -> for a single character
+  #    preprocessor directive (e.g. #include, #define)
+  //   single-line comment
+  /* */ multi-line comment
+  &    "address of" operator (used with pointers)
+  *    "value at address" operator (used with pointers) /
+       also multiplication
+  ->   arrow operator (used with pointers to structs) [later topic]
+  %    format specifier prefix (in printf/scanf) / also modulus
+
+
+----------------------------------------
+11. INPUT AND OUTPUT
+----------------------------------------
+printf() -> prints output to the screen
+scanf()  -> reads input from the keyboard
+
+Format specifiers used with printf/scanf:
+  %d    int
+  %f    float
+  %lf   double (used in scanf)
+  %c    char
+  %s    string (char array)
+  %u    unsigned int
+  %x    hexadecimal
+  %o    octal
+  %p    pointer address
+  %%    prints a literal % sign
+
+Example:
+    int age;
+    printf("Enter your age: ");
+    scanf("%d", &age);
+    printf("You are %d years old.\n", age);
+
+Note: & before "age" means "give scanf the memory address of age"
+so it can store the value directly into that variable.
+
+
+----------------------------------------
+12. ESCAPE SEQUENCES
+----------------------------------------
+  \n   new line
+  \t   tab
+  \\   backslash
+  \'   single quote
+  \"   double quote
+  \0   null character (marks end of a string)
+  \r   carriage return
+
+
+----------------------------------------
+13. TYPE CASTING
+----------------------------------------
+Converting one data type into another.
+
+  int a = 10;
+  float b = (float) a;   // explicit (manual) casting
+
+  int x = 3, y = 2;
+  float result = (float) x / y;   // avoids integer division
+
+
+----------------------------------------
+14. CONDITIONAL STATEMENTS (before loops)
+----------------------------------------
+if / else if / else:
+
+    int num = 10;
+    if (num > 0) {
+        printf("Positive\n");
+    } else if (num < 0) {
+        printf("Negative\n");
+    } else {
+        printf("Zero\n");
+    }
+
+switch statement:
+
+    int day = 2;
+    switch (day) {
+        case 1:
+            printf("Monday\n");
+            break;
+        case 2:
+            printf("Tuesday\n");
+            break;
+        default:
+            printf("Unknown day\n");
+    }
+
+Note: "break" stops the switch from "falling through" into
+the next case.
+
+
+----------------------------------------
+15. ARRAYS (basic intro)
+----------------------------------------
+An array stores multiple values of the same type.
+
+    int numbers[5] = {1, 2, 3, 4, 5};
+    printf("%d\n", numbers[0]);   // prints 1 (index starts at 0)
+
+Strings in C are just character arrays ending in '\0':
+    char name[] = "Claude";
+
+
+----------------------------------------
+16. FUNCTIONS (basic intro)
+----------------------------------------
+A function is a reusable block of code.
+
+    int add(int a, int b) {
+        return a + b;
+    }
+
+    int main(void) {
+        int result = add(3, 4);
+        printf("%d\n", result);
+        return 0;
+    }
+
+Parts of a function:
+  return_type  name(parameters) { body }
+
+
+----------------------------------------
+17. KEYWORDS (RESERVED WORDS) IN C
+----------------------------------------
+auto      break     case      char      const
+continue  default   do        double    else
+enum      extern    float     for       goto
+if        int       long      register  return
+short     signed    sizeof    static    struct
+switch    typedef   union     unsigned  void
+volatile  while
+
+These words have special meaning in C and cannot be used as
+variable names.
+

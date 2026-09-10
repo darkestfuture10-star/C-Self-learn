@@ -1,7 +1,6 @@
-// prime or odd number using conditional statements in C programming language
+// prime or odd number using conditional statements in C programming language (only for numbers 1-100)
 
 #include <stdio.h>
-#include <math.h>
 
 int main()
 {
@@ -12,10 +11,6 @@ int main()
 
     if(num % 2 == 0 || num % 3 == 0 || num % 5 == 0 || num % 7 == 0) 
     {
-        printf("%d is not a prime number", num);
-    }
-        else if(num % num2 == 0)
-        {
         printf("%d is not a prime number", num);
     }
     else
