@@ -30,6 +30,9 @@ int main()
 
         printf("The roots of the equation are %.2f and %.2f", x, y); // the roots are printed to the console using the printf function.
     }
+    
+    getchar();
+    getchar();
     return 0;
 
 }
