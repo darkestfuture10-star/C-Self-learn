@@ -1,3 +1,4 @@
+// making a prime number checker
 #include<stdio.h>
 int main()
 {

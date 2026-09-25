@@ -3,7 +3,7 @@
 int main()
 {
     int n;
-    printf("Enter a number to see all the prime numbers before it");
+    printf("Enter a number to see all the prime numbers before it ");
     scanf("%d", &n);
     for(int i=2; i<n; i++)
     {

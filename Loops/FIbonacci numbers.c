@@ -1,7 +1,6 @@
 // FIbonacci numbers series using loops
 // 0 to nth Fibonacci numbers
 #include <stdio.h>
-#include <math.h>
 
 int main()
 {
