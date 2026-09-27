@@ -41,3 +41,6 @@ int main()
     }
     return 0;
 }
+
+
+// 1.2v will contain how to make the code shorter & easier by functions
