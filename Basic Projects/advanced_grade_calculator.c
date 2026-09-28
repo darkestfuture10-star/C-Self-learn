@@ -1,6 +1,23 @@
 #include<stdio.h>
 #include<string.h>
 
+int subMark(char sub[])
+{
+    float mark;
+    do
+    {
+        printf("%s", sub);
+        scanf("%f", &mark);
+        if(mark > 100)
+        {
+            printf("Invalid number!!\nPlease try again.");
+        }
+    }
+    while(mark > 100);
+    
+    return mark;
+}
+
 int main()
 {
     printf("Welcome to grade calculator\nby EasyMade\n\nEnter your full name: ");
@@ -13,19 +30,12 @@ int main()
     float math, physics, chemistry, biology;
     printf("Enter the marks of the following subjects...\n");
 
-    printf("Math: ");
-    scanf("%f", &math);
+    math = subMark("\nMath:");
+    physics = subMark("\nPhysics:");
+    chemistry = subMark("\nChemistry:");
+    biology = subMark("\nBiology:");
 
-    printf("Physics: ");
-    scanf("%f", &physics);
-
-    printf("Chemistry: ");
-    scanf("%f", &chemistry);
-
-    printf("Biology: ");
-    scanf("%f", &biology);
-
-    int avg = (math + physics + chemistry + biology) / 4;
+    float avg = (math + physics + chemistry + biology) / 4;
 
     if(avg >= 80)
     {
