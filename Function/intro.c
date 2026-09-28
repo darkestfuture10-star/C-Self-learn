@@ -12,12 +12,13 @@ float calc(int a, int b)
 }
 
 int main()
-{   /*
+{   
+    
     float a, b;
     printf("Enter the value of a & b\n");
     scanf("%f %f", &a, &b);
-    */
-    float sum = calc(2, 4);
+    
+    float sum = calc(a, b);
     printf("%f", sum);
 
     return 0;

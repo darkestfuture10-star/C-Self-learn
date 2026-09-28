@@ -39,18 +39,20 @@ int main()
 
     if(avg >= 80)
     {
-    printf("Congrats!! \nyou got A+");
+    printf("\nCongrats!! \nyou got A+");
     }
     else if(avg >= 70 && avg < 90 )
     {
-        printf("Great! \nyou got A");
+        printf("\nGreat! \nyou got A");
     }
     else
     {
-        printf("Better luck next time.");
+        printf("\nBetter luck next time.");
     }
     return 0;
 }
 
 
-// 1.2v will contain how to make the code shorter & easier by functions
+/*
+    1.5v, set the mark limit to 100 & used function to call the mark & subject input
+*/
