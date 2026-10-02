@@ -1,4 +1,5 @@
 /.vscode
 /.git
+/.gitmodules
 
 // add any files or directories you want to ignore to git commits.
